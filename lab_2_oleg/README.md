@@ -71,13 +71,13 @@ if ($_FILES && $_FILES['file']['error']== UPLOAD_ERR_OK) {
     $mysql_posts = new mysqli('localhost', 'root', 'root', 'login_form');
     $mysql_posts->query("INSERT INTO `posts` (`user`,`text`, `likes`, `dislikes`, `image`) VALUES ('$user', '$text', '0', '0', '$image')");
 
-    header('Location: /lab_2_anton/main.php');
+    header('Location: /lab_2_oleg/main.php');
 
 } else {
     $mysql_posts = new mysqli('localhost', 'root', 'root', 'login_form');
     $mysql_posts->query("INSERT INTO `posts` (`user`,`text`, `likes`, `dislikes`, `image`) VALUES ('$user', '$text', '0', '0', '')");
 
-    header('Location: /lab_2_anton/main.php');
+    header('Location: /lab_2_oleg/main.php');
 }
 ```
 
